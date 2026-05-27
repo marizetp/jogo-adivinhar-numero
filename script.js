@@ -21,3 +21,10 @@ botaoVerificar.addEventListener('click', function (){
         mensagem.textContent = '📉 Muito baixo!';
     }
 }); 
+
+botaoReiniciar.addEventListener('click', function () {
+    numero.textContent = '9';
+    mensagem.textContent = 'Comece a adivinhar...';
+    document.body.style.backgroundColor = '#090d19';
+    input.value = '';
+});
