@@ -6,3 +6,18 @@ const numero = document.querySelector('.number');
 const input = document.querySelector('.guess');
 const botaoVerificar = document.querySelector('.check');
 const botaoReiniciar = document.querySelector('.again');
+
+numero.textContent = '9';
+
+botaoVerificar.addEventListener('click', function (){
+    if (!input.value) {
+        mensagem.textContent = '⛔ Nenhum número!';
+    } else if (Number(input.value) == Number(numero.textContent)) {
+        mensagem.textContent = '🎉 Número correto!';
+        document.body.style.backgroundColor = '#60b347';
+    } else if (Number(input.value) > Number(numero.textContent)) {
+        mensagem.textContent = '📈 Muito alto!';
+    } else if (Number(input.value) < Number(numero.textContent)) {
+        mensagem.textContent = '📉 Muito baixo!';
+    }
+}); 
